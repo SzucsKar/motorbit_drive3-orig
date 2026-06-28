@@ -5,7 +5,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "motorbit": "github:emakefun/pxt-motorbit#ba862affd2ae1534cdd3a2ef0d5d100225eea518",
+        "motorbit": "github:emakefun/pxt-motorbit#2e34aab17386da894d1fdbd6318e86ab3525fe0e",
         "i2cLCD1602": "github:makecode-extensions/i2clcd1602#v1.5.0"
     },
     "files": [

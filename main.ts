@@ -146,18 +146,24 @@ function flashLight(offset: Offset, color: RgbColors, count: number) {
         basic.pause(500)
     }
 }
-basic.showIcon(IconNames.SmallSquare)
-basic.showIcon(IconNames.Square)
+
+function showStartupAnimation() {
+    basic.showIcon(IconNames.SmallSquare)
+    basic.pause(100)
+    basic.showIcon(IconNames.Square)
+    basic.pause(100)
+    basic.clearScreen()
+}
+
+showStartupAnimation()
 radio.setGroup(2)
 degree = 90
 EM_IR.IrRemote_init(IrPins.P5)
 motorbit.Servo(motorbit.Servos.S1, degree)
 I2C_LCD1602.LcdInit(39)
-basic.showIcon(IconNames.Square)
-basic.showIcon(IconNames.SmallSquare)
-basic.clearScreen()
+basic.pause(100)
 showStatus("Have a good day", 1, 1, true)
-basic.pause(2000)
+basic.pause(500)
 showStatus("", 1, 0, false)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P12) == 1 && pins.digitalReadPin(DigitalPin.P13) == 1) {
